@@ -5,7 +5,6 @@ description = "Rust bindings to libucl"
 documentation = "http://lukasz.niemier.pl/ucl-rs"
 authors = ["Łukasz Niemier <lukasz@niemier.pl>"]
 license = "MIT"
-license-file = "LICENSE"
 repository = "https://github.com/hauleth/ucl-rs"
 
 [features]
@@ -15,3 +14,4 @@ unstable = [] # in case of nightly build
 [dependencies]
 libucl-sys = "*"
 libc = "*"
+bitflags = "*"
