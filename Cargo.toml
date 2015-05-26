@@ -1,9 +1,10 @@
 [package]
 name = "ucl"
-version = "0.1.1"
+version = "0.1.2"
 description = "Rust bindings to libucl"
 documentation = "http://lukasz.niemier.pl/ucl-rs"
 authors = ["Łukasz Niemier <lukasz@niemier.pl>"]
+license = "MIT"
 license-file = "LICENSE"
 repository = "https://github.com/hauleth/ucl-rs"
 
