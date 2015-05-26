@@ -10,6 +10,6 @@ fn main() {
 
     println!("{:?}", config.fetch("lol").and_then(|val| val.as_string()));
     println!("{:?}", config.fetch_path("placki.duze").and_then(|val| val.as_bool()));
-    println!("{:?}", config.fetch_path("placki.diameter").and_then(|val| val.as_int()));
+    println!("{:?}", config.fetch_path("placki.średnica").and_then(|val| val.as_int()));
     println!("{:?}", config.fetch_path("non.existent.path").and_then(|val| val.as_string()));
 }
