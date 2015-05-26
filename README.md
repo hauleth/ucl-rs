@@ -1,5 +1,7 @@
 # Rust wrapper around [libucl][libucl]
 
+[![Build Status](https://travis-ci.org/hauleth/ucl-rs.svg)](https://travis-ci.org/hauleth/ucl-rs)
+
 ## Usage
 
 ```rust
