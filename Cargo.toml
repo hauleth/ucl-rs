@@ -7,6 +7,10 @@ authors = ["Łukasz Niemier <lukasz@niemier.pl>"]
 license-file = "LICENSE"
 repository = "https://github.com/hauleth/ucl-rs"
 
+[features]
+default = []
+nightly = [] # in case of nightly build
+
 [dependencies]
 libucl-sys = "*"
 libc = "*"
