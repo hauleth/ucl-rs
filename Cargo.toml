@@ -1,0 +1,8 @@
+[package]
+name = "ucl"
+version = "0.1.0"
+authors = ["Łukasz Niemier <lukasz@niemier.pl>"]
+
+[dependencies]
+libucl-sys = "*"
+libc = "*"
