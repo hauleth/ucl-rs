@@ -20,3 +20,5 @@ println!("{}", result.fetch_path("section.nice").and_then(|v| v.as_bool()));
 ## Licence
 
 Check out [LICENCE](LICENCE) file.
+
+[libucl]: https://github.com/vstakhov/libucl "Universal configuration library parser"
