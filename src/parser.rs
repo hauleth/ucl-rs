@@ -1,12 +1,4 @@
-use libucl_sys::{
-    ucl_parser,
-    ucl_parser_new,
-    ucl_parser_free,
-    ucl_parser_add_file,
-    ucl_parser_add_chunk,
-    ucl_parser_get_error,
-    ucl_parser_get_object,
-};
+use libucl_sys::*;
 use libc::size_t;
 
 use super::utils;
@@ -94,6 +86,23 @@ impl Parser {
         }
     }
 
+    /// Register new variable
+    ///
+    /// # Examples
+    ///
+    /// ```rust
+    /// let p = Parser::new();
+    /// p.register_var("LOL".to_string(), "test".to_string());
+    /// let res = p.parse("lol = $LOL").unwrap();
+    ///
+    /// assert_eq!(res.fetch("lol").unwrap().as_string(), Some("test".to_string()));
+    /// ```
+    pub fn register_var(&self, name: String, value: String) {
+        unsafe {
+            ucl_parser_register_variable(self.parser, utils::to_c_str(name), utils::to_c_str(value))
+        }
+    }
+
     fn get_object(&mut self) -> Option<Object> {
         Object::from_cptr(unsafe { ucl_parser_get_object(self.parser) })
     }
@@ -152,5 +161,15 @@ mod test {
         let res = p.parse(s).unwrap();
 
         assert_eq!(res.fetch("lol").unwrap().as_int(), Some(10));
+    }
+
+    #[test]
+    fn variables() {
+        let s = r#"lol = $LOL"#;
+        let p = Parser::new();
+        p.register_var("LOL".to_string(), "test".to_string());
+        let res = p.parse(s).unwrap();
+
+        assert_eq!(res.fetch("lol").unwrap().as_string(), Some("test".to_string()));
     }
 }
