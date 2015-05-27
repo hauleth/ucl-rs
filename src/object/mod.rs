@@ -54,10 +54,10 @@ impl Object {
     /// # Examples
     ///
     /// ```rust
-    /// let obj = ucl::Object::from(10);
+    /// let obj = ucl::object::Builder::from(10).build();
     /// assert_eq!(obj.as_int(), Some(10));
     ///
-    /// let obj = ucl::Object::from("lol");
+    /// let obj = ucl::object::Builder::from("lol").build();
     /// assert_eq!(obj.as_int(), None);
     /// ```
     pub fn as_int(&self) -> Option<i64> {
@@ -82,10 +82,10 @@ impl Object {
     /// # Examples
     ///
     /// ```rust
-    /// let obj = ucl::Object::from(10f64);
+    /// let obj = ucl::object::Builder::from(10f64).build();
     /// assert_eq!(obj.as_float(), Some(10.0));
     ///
-    /// let obj = ucl::Object::from("lol");
+    /// let obj = ucl::object::Builder::from("lol");
     /// assert_eq!(obj.as_float(), None);
     /// ```
     pub fn as_float(&self) -> Option<f64> {
@@ -110,10 +110,10 @@ impl Object {
     /// # Examples
     ///
     /// ```rust
-    /// let obj = ucl::Object::from(true);
+    /// let obj = ucl::object::Builder::from(true).build();
     /// assert_eq!(obj.as_bool(), Some(true));
     ///
-    /// let obj = ucl::Object::from(10);
+    /// let obj = ucl::object::Builder::from(10).build();
     /// assert_eq!(obj.as_bool(), None);
     /// ```
     pub fn as_bool(&self) -> Option<bool> {
@@ -138,10 +138,10 @@ impl Object {
     /// # Examples
     ///
     /// ```rust
-    /// let obj = ucl::Object::from("lol");
+    /// let obj = ucl::object::Builder::from("lol").Build();
     /// assert_eq!(obj.as_string(), Some("lol".to_string()));
     ///
-    /// let obj = ucl::Object::from(10);
+    /// let obj = ucl::object::Builder::from(10).build();
     /// assert_eq!(obj.as_string(), None);
     /// ```
     pub fn as_string(&self) -> Option<String> {
