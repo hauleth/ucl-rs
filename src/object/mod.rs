@@ -85,7 +85,7 @@ impl Object {
     /// let obj = ucl::object::Builder::from(10f64).build();
     /// assert_eq!(obj.as_float(), Some(10.0));
     ///
-    /// let obj = ucl::object::Builder::from("lol");
+    /// let obj = ucl::object::Builder::from("lol").build();
     /// assert_eq!(obj.as_float(), None);
     /// ```
     pub fn as_float(&self) -> Option<f64> {
@@ -138,7 +138,7 @@ impl Object {
     /// # Examples
     ///
     /// ```rust
-    /// let obj = ucl::object::Builder::from("lol").Build();
+    /// let obj = ucl::object::Builder::from("lol").build();
     /// assert_eq!(obj.as_string(), Some("lol".to_string()));
     ///
     /// let obj = ucl::object::Builder::from(10).build();
