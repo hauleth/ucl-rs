@@ -2,6 +2,7 @@ use libucl_sys::*;
 
 pub use self::types::Type;
 pub use self::builder::Builder;
+pub use self::emitter::Emitter;
 use utils;
 
 use std::convert::From;
@@ -9,6 +10,7 @@ use std::fmt;
 
 pub mod types;
 pub mod builder;
+pub mod emitter;
 
 #[cfg(test)]
 mod test;
@@ -197,10 +199,13 @@ impl Object {
     }
 }
 
+impl AsRef<Object> for Object {
+    fn as_ref(&self) -> &Self { self }
+}
+
 impl fmt::Debug for Object {
     fn fmt(&self, fmt: &mut fmt::Formatter) -> Result<(), fmt::Error> {
-        let emit = unsafe { ucl_object_emit(self.obj, ucl_emitter::UCL_EMIT_JSON) };
-        let string = utils::to_str(emit);
+        let string = Emitter::JSON.emit(&self);
 
         if string.is_some() {
             fmt.write_str(&string.unwrap())
