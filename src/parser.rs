@@ -1,8 +1,11 @@
 use libucl_sys::*;
 use libc::size_t;
 
-use super::utils;
-use super::object::Object;
+use utils;
+use object::{
+    self,
+    Object
+};
 
 use std::path::Path;
 
@@ -104,7 +107,7 @@ impl Parser {
     }
 
     fn get_object(&mut self) -> Option<Object> {
-        Object::from_cptr(unsafe { ucl_parser_get_object(self.parser) })
+        object::Builder::from_ptr(unsafe { ucl_parser_get_object(self.parser) }).map(|o| o.build())
     }
 
     fn get_error(&mut self) -> Option<String> {

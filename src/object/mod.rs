@@ -1,37 +1,17 @@
 use libucl_sys::*;
 
-use std::convert::From;
-use std::fmt;
+pub use self::types::Type;
+pub use self::builder::Builder;
 use utils;
 
-#[derive(Debug, PartialEq, Eq, Copy, Clone)]
-pub enum Type {
-    Object,
-    Array,
-    Int,
-    Float,
-    String,
-    Boolean,
-    Time,
-    UserData,
-    Null
-}
+use std::convert::From;
+use std::fmt;
 
-impl From<ucl_type_t> for Type {
-    fn from(typ: ucl_type_t) -> Self {
-        match typ {
-            ucl_type_t::UCL_OBJECT   => Type::Object,
-            ucl_type_t::UCL_ARRAY    => Type::Array,
-            ucl_type_t::UCL_INT      => Type::Int,
-            ucl_type_t::UCL_FLOAT    => Type::Float,
-            ucl_type_t::UCL_STRING   => Type::String,
-            ucl_type_t::UCL_BOOLEAN  => Type::Boolean,
-            ucl_type_t::UCL_TIME     => Type::Time,
-            ucl_type_t::UCL_USERDATA => Type::UserData,
-            ucl_type_t::UCL_NULL     => Type::Null,
-        }
-    }
-}
+pub mod types;
+pub mod builder;
+
+#[cfg(test)]
+mod test;
 
 /// File element object.
 ///
@@ -44,7 +24,7 @@ pub struct Object {
 
 impl Object {
     /// Create new `Object` form const raw pointer. Internal use only.
-    pub fn from_cptr(obj: *const ucl_object_t) -> Option<Self> {
+    fn from_cptr(obj: *const ucl_object_t) -> Option<Self> {
         if !obj.is_null() {
             Some(Object {
                 obj: obj,
@@ -75,11 +55,9 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Object::from(10);
-    ///
     /// assert_eq!(obj.as_int(), Some(10));
     ///
     /// let obj = ucl::Object::from("lol");
-    ///
     /// assert_eq!(obj.as_int(), None);
     /// ```
     pub fn as_int(&self) -> Option<i64> {
@@ -105,11 +83,9 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Object::from(10f64);
-    ///
     /// assert_eq!(obj.as_float(), Some(10.0));
     ///
     /// let obj = ucl::Object::from("lol");
-    ///
     /// assert_eq!(obj.as_float(), None);
     /// ```
     pub fn as_float(&self) -> Option<f64> {
@@ -135,11 +111,9 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Object::from(true);
-    ///
     /// assert_eq!(obj.as_bool(), Some(true));
     ///
     /// let obj = ucl::Object::from(10);
-    ///
     /// assert_eq!(obj.as_bool(), None);
     /// ```
     pub fn as_bool(&self) -> Option<bool> {
@@ -165,11 +139,9 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Object::from("lol");
-    ///
     /// assert_eq!(obj.as_string(), Some("lol".to_string()));
     ///
     /// let obj = ucl::Object::from(10);
-    ///
     /// assert_eq!(obj.as_string(), None);
     /// ```
     pub fn as_string(&self) -> Option<String> {
@@ -190,7 +162,6 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Parser::new().parse("a = b;").unwrap();
-    ///
     /// assert_eq!(obj.fetch("a").unwrap().as_string(), Some("b".to_string()));
     /// ```
     pub fn fetch<T: AsRef<str>>(&self, key: T) -> Option<Object> {
@@ -211,7 +182,6 @@ impl Object {
     ///
     /// ```rust
     /// let obj = ucl::Parser::new().parse("a = { b = c; }").unwrap();
-    ///
     /// assert_eq!(obj.fetch_path("a.b").unwrap().as_string(), Some("c".to_string()));
     /// ```
     pub fn fetch_path<T: AsRef<str>>(&self, path: T) -> Option<Object> {
@@ -237,109 +207,5 @@ impl fmt::Debug for Object {
         } else {
             Err(fmt::Error)
         }
-    }
-}
-
-impl Clone for Object {
-    fn clone(&self) -> Self {
-        Object::from_cptr(unsafe { ucl_object_copy(self.obj) }).unwrap()
-    }
-
-    fn clone_from(&mut self, other: &Self) {
-        self.obj = unsafe { ucl_object_copy(other.obj) };
-    }
-}
-
-macro_rules! from_primitive {
-    ($from: ty => $ctype: ident, $func: ident) => {
-        impl From<$from> for Object {
-            fn from(val: $from) -> Self {
-                use libc;
-                use libucl_sys::$func;
-                Object::from_cptr(unsafe { $func(val as libc::$ctype) }).unwrap()
-            }
-        }
-    };
-
-    ($from: ty, $func: ident) => {
-        impl From<$from> for Object {
-            fn from(val: $from) -> Self {
-                use libucl_sys::$func;
-                Object::from_cptr(unsafe { $func(val) }).unwrap()
-            }
-        }
-    }
-}
-
-from_primitive!(i64 => int64_t, ucl_object_fromint);
-from_primitive!(f64 => c_double, ucl_object_fromdouble);
-from_primitive!(bool, ucl_object_frombool);
-
-impl From<String> for Object {
-    fn from(val: String) -> Self {
-        use libc;
-        use libucl_sys::ucl_object_fromlstring;
-
-        let len = val.len();
-        Object::from_cptr(unsafe { ucl_object_fromlstring(utils::to_c_str(val), len as libc::size_t) }).unwrap()
-    }
-}
-
-impl<'a> From<&'a str> for Object {
-    fn from(val: &str) -> Self {
-        From::from(val.to_string())
-    }
-}
-
-#[cfg(test)]
-mod test {
-    use super::*;
-
-    #[test]
-    fn from_int() {
-        let obj = Object::from(10);
-        assert_eq!(obj.get_type(), Type::Int);
-    }
-
-    #[test]
-    fn from_double() {
-        let obj = Object::from(10.0f64);
-        assert_eq!(obj.get_type(), Type::Float);
-    }
-
-    #[test]
-    fn from_bool() {
-        let obj = Object::from(true);
-        assert_eq!(obj.get_type(), Type::Boolean);
-    }
-
-    #[test]
-    fn from_string() {
-        let obj = Object::from("lol".to_string());
-        assert_eq!(obj.get_type(), Type::String);
-    }
-
-    #[test]
-    fn from_str() {
-        let obj = Object::from("lol");
-        assert_eq!(obj.get_type(), Type::String);
-    }
-
-    #[test]
-    fn to_int() {
-        let obj = Object::from(10);
-        assert_eq!(obj.as_int(), Some(10));
-    }
-
-    #[test]
-    fn to_string() {
-        let obj = Object::from("lol");
-        assert_eq!(obj.as_string(), Some("lol".to_string()));
-    }
-
-    #[test]
-    fn to_int_invalid_type() {
-        let obj = Object::from(10.0f64);
-        assert_eq!(obj.as_int(), None);
     }
 }
