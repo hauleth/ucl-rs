@@ -91,7 +91,7 @@ impl Parser {
     /// # Examples
     ///
     /// ```rust
-    /// let p = Parser::new();
+    /// let p = ucl::Parser::new();
     /// p.register_var("LOL".to_string(), "test".to_string());
     /// let res = p.parse("lol = $LOL").unwrap();
     ///
