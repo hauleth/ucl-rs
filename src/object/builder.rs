@@ -5,7 +5,7 @@ use super::Object;
 
 use std::convert::From;
 
-/// File element object.
+/// Build element object.
 ///
 /// This structure is immutable typed reference to object inside parsed tree. It can be one of
 /// `Type` elements and can be cast only to given type.

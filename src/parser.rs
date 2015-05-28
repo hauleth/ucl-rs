@@ -10,7 +10,7 @@ use object::{
 use std::path::Path;
 
 bitflags! {
-    flags ParserFlags: i32 {
+    flags Flags: i32 {
         const DEFAULT            = 0x0,
         const LOWERCASE          = 0x1,
         const ZEROCOPY           = 0x2,
@@ -48,7 +48,7 @@ impl Parser {
     ///
     /// assert!(doc.fetch("a").is_some());
     /// ```
-    pub fn with_flags(flags: ParserFlags) -> Self {
+    pub fn with_flags(flags: Flags) -> Self {
         Parser {
             parser: unsafe { ucl_parser_new(flags.bits()) }
         }
