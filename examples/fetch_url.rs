@@ -5,7 +5,7 @@ fn main() {
 
     let config = match parser.parse_file("examples/include.conf") {
         Ok(conf) => conf,
-        Err(err) => panic!("{}", err)
+        Err(err) => panic!("{:?}", err)
     };
 
     println!("{:?}", config.fetch("lol").and_then(|val| val.as_string()));

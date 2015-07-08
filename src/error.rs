@@ -1,28 +1,30 @@
 use libucl_sys::ucl_error_t;
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Debug)]
 pub enum Error {
     Ok,
-    Syntax,
+    Syntax(String),
     Io,
     State,
     Nested,
     Macro,
     Internal,
-    SSL
+    SSL,
+    Other
 }
 
-impl From<ucl_error_t> for Error {
-    fn from(err: ucl_error_t) -> Self {
-        match err {
-            ucl_error_t::UCL_EOK       => Error::Ok,
-            ucl_error_t::UCL_ESYNTAX   => Error::Syntax,
-            ucl_error_t::UCL_EIO       => Error::Io,
-            ucl_error_t::UCL_ESTATE    => Error::State,
-            ucl_error_t::UCL_ENESTED   => Error::Nested,
-            ucl_error_t::UCL_EMACRO    => Error::Macro,
-            ucl_error_t::UCL_EINTERNAL => Error::Internal,
-            ucl_error_t::UCL_ESSL      => Error::SSL
+impl Error {
+    pub fn from_code(num: i32, desc: String) -> Self {
+        match num {
+            _ if num == ucl_error_t::UCL_EOK       as i32 => Error::Ok,
+            _ if num == ucl_error_t::UCL_ESYNTAX   as i32 => Error::Syntax(desc),
+            _ if num == ucl_error_t::UCL_EIO       as i32 => Error::Io,
+            _ if num == ucl_error_t::UCL_ESTATE    as i32 => Error::State,
+            _ if num == ucl_error_t::UCL_ENESTED   as i32 => Error::Nested,
+            _ if num == ucl_error_t::UCL_EMACRO    as i32 => Error::Macro,
+            _ if num == ucl_error_t::UCL_EINTERNAL as i32 => Error::Internal,
+            _ if num == ucl_error_t::UCL_ESSL      as i32 => Error::SSL,
+            _ => Error::Other,
         }
     }
 }

@@ -2,6 +2,8 @@ use libucl_sys::*;
 use libc::size_t;
 
 use utils;
+use error;
+use super::Result;
 use object::{
     self,
     Object
@@ -64,28 +66,28 @@ impl Parser {
     /// assert!(ucl::Parser::new().parse("a = b").is_ok());
     /// assert!(ucl::Parser::new().parse("a =").is_err());
     /// ```
-    pub fn parse<T: AsRef<str>>(mut self, string: T) -> Result<Object, String> {
+    pub fn parse<T: AsRef<str>>(mut self, string: T) -> Result<Object> {
         let len = string.as_ref().len() as size_t;
         let result = unsafe { ucl_parser_add_chunk(self.parser, utils::to_c_str(string), len) };
 
         if result {
             Ok(self.get_object().unwrap())
         } else {
-            Err(self.get_error().unwrap())
+            Err(self.get_error())
         }
     }
 
     /// Parse file at given `Path`.
     ///
     /// It moves out `Parser`.
-    pub fn parse_file<T: AsRef<Path>>(mut self, path: T) -> Result<Object, String> {
+    pub fn parse_file<T: AsRef<Path>>(mut self, path: T) -> Result<Object> {
         let filename = path.as_ref().to_str().unwrap();
         let result = unsafe { ucl_parser_add_file(self.parser, utils::to_c_str(filename)) };
 
         if result {
             Ok(self.get_object().unwrap())
         } else {
-            Err(self.get_error().unwrap())
+            Err(self.get_error())
         }
     }
 
@@ -110,10 +112,11 @@ impl Parser {
         object::Builder::from_ptr(unsafe { ucl_parser_get_object(self.parser) }).map(|o| o.build())
     }
 
-    fn get_error(&mut self) -> Option<String> {
-        let err = unsafe { ucl_parser_get_error(self.parser) };
+    fn get_error(&mut self) -> error::Error {
+        let err = unsafe { ucl_parser_get_error_code(self.parser) };
+        let desc = unsafe { ucl_parser_get_error(self.parser) };
 
-        utils::to_str(err)
+        error::Error::from_code(err, utils::to_str(desc).unwrap())
     }
 }
 

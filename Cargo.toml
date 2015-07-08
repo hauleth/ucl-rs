@@ -12,6 +12,9 @@ default = []
 unstable = [] # in case of nightly build
 
 [dependencies]
-libucl-sys = "*"
 libc = "*"
 bitflags = "*"
+
+[dependencies.libucl-sys]
+path = "libucl-sys"
+version = "*"

@@ -1,0 +1,17 @@
+[package]
+name = "libucl-sys"
+version = "0.1.5"
+description = "Low-level bindings to libucl."
+authors = ["Łukasz Niemier <lukasz@niemier.pl>"]
+build = "build.rs"
+license-file = "LICENSE"
+repository = "https://github.com/hauleth/libucl-sys"
+
+[lib]
+name = "libucl_sys"
+path = "lib.rs"
+
+[dependencies]
+libc = "*"
+curl-sys = "*"
+bitflags = "*"

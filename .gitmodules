@@ -1,0 +1,7 @@
+[submodule "libucl"]
+	path = libucl-sys/libucl
+	url = git://github.com/vstakhov/libucl.git
+	ignore = dirty
+[submodule "libucl-sys/libucl"]
+	path = libucl-sys/libucl
+	url = git://github.com/vstakhov/libucl.git
