@@ -4,9 +4,6 @@ use std::io::ErrorKind;
 use std::path::PathBuf;
 
 fn main() {
-    let mut cflags = env::var("CFLAGS").unwrap_or(String::new());
-    cflags.push_str(" -fPIC");
-
     let src = PathBuf::from(&env::var("CARGO_MANIFEST_DIR").unwrap());
     let dst = PathBuf::from(&env::var("OUT_DIR").unwrap());
 
@@ -16,16 +13,18 @@ fn main() {
     run(&mut cmd, "autogen.sh");
 
     let mut cmd = Command::new("./configure");
-    cmd.current_dir(&src.join("libucl"));
-    cmd.arg(&format!("--prefix={}", dst.display()));
+    cmd
+        .current_dir(&src.join("libucl"))
+        .arg(&format!("--prefix={}", dst.display()));
     run(cmd.arg("--enable-urls")
            .arg("--enable-regex")
            .arg("--disable-shared")
+           .arg("--disable-dependency-tracking")
            .arg("--with-pic"), "configure");
 
     let mut cmd = Command::new("make");
-    cmd.env("CFLAGS", cflags);
-    cmd.current_dir(&src.join("libucl"));
+    cmd
+        .current_dir(&src.join("libucl"));
     run(cmd.arg("install"), "make");
 
     println!("cargo:rustc-link-lib=static=ucl");

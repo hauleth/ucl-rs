@@ -13,5 +13,5 @@ path = "lib.rs"
 
 [dependencies]
 libc = "*"
-curl-sys = "*"
 bitflags = "*"
+curl-sys = "*"
