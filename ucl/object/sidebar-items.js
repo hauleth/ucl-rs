@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["builder",""],["emitter",""],["types",""]],"struct":[["Object","File element object."]]});

@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `curl_sys` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, curl_sys">
+
+    <title>curl_sys - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'curl_sys', ty: 'mod', relpath: '../'};</script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>curl_sys</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-0' class='srclink' href='../src/curl_sys/lib.rs.html#1-483' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='struct' href='struct.curl_version_info_data.html'
+                               title='curl_sys::curl_version_info_data'>curl_version_info_data</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.CURLcode.html'
+                               title='curl_sys::CURLcode'>CURLcode</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='enum' href='enum.CURLversion.html'
+                               title='curl_sys::CURLversion'>CURLversion</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_DOUBLE.html'
+                               title='curl_sys::CURLINFO_DOUBLE'>CURLINFO_DOUBLE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_EFFECTIVE_URL.html'
+                               title='curl_sys::CURLINFO_EFFECTIVE_URL'>CURLINFO_EFFECTIVE_URL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_LONG.html'
+                               title='curl_sys::CURLINFO_LONG'>CURLINFO_LONG</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_MASK.html'
+                               title='curl_sys::CURLINFO_MASK'>CURLINFO_MASK</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_RESPONSE_CODE.html'
+                               title='curl_sys::CURLINFO_RESPONSE_CODE'>CURLINFO_RESPONSE_CODE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_SLIST.html'
+                               title='curl_sys::CURLINFO_SLIST'>CURLINFO_SLIST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_STRING.html'
+                               title='curl_sys::CURLINFO_STRING'>CURLINFO_STRING</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_TOTAL_TIME.html'
+                               title='curl_sys::CURLINFO_TOTAL_TIME'>CURLINFO_TOTAL_TIME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLINFO_TYPEMASK.html'
+                               title='curl_sys::CURLINFO_TYPEMASK'>CURLINFO_TYPEMASK</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPTTYPE_FUNCTIONPOINT.html'
+                               title='curl_sys::CURLOPTTYPE_FUNCTIONPOINT'>CURLOPTTYPE_FUNCTIONPOINT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPTTYPE_LONG.html'
+                               title='curl_sys::CURLOPTTYPE_LONG'>CURLOPTTYPE_LONG</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPTTYPE_OBJECTPOINT.html'
+                               title='curl_sys::CURLOPTTYPE_OBJECTPOINT'>CURLOPTTYPE_OBJECTPOINT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPTTYPE_OFF_T.html'
+                               title='curl_sys::CURLOPTTYPE_OFF_T'>CURLOPTTYPE_OFF_T</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_ACCEPTTIMEOUT_MS.html'
+                               title='curl_sys::CURLOPT_ACCEPTTIMEOUT_MS'>CURLOPT_ACCEPTTIMEOUT_MS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_ACCEPT_ENCODING.html'
+                               title='curl_sys::CURLOPT_ACCEPT_ENCODING'>CURLOPT_ACCEPT_ENCODING</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_ADDRESS_SCOPE.html'
+                               title='curl_sys::CURLOPT_ADDRESS_SCOPE'>CURLOPT_ADDRESS_SCOPE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_APPEND.html'
+                               title='curl_sys::CURLOPT_APPEND'>CURLOPT_APPEND</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_AUTOREFERER.html'
+                               title='curl_sys::CURLOPT_AUTOREFERER'>CURLOPT_AUTOREFERER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_BUFFERSIZE.html'
+                               title='curl_sys::CURLOPT_BUFFERSIZE'>CURLOPT_BUFFERSIZE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CAINFO.html'
+                               title='curl_sys::CURLOPT_CAINFO'>CURLOPT_CAINFO</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CAPATH.html'
+                               title='curl_sys::CURLOPT_CAPATH'>CURLOPT_CAPATH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CERTINFO.html'
+                               title='curl_sys::CURLOPT_CERTINFO'>CURLOPT_CERTINFO</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CHUNK_BGN_FUNCTION.html'
+                               title='curl_sys::CURLOPT_CHUNK_BGN_FUNCTION'>CURLOPT_CHUNK_BGN_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CHUNK_DATA.html'
+                               title='curl_sys::CURLOPT_CHUNK_DATA'>CURLOPT_CHUNK_DATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CHUNK_END_FUNCTION.html'
+                               title='curl_sys::CURLOPT_CHUNK_END_FUNCTION'>CURLOPT_CHUNK_END_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CLOSEPOLICY.html'
+                               title='curl_sys::CURLOPT_CLOSEPOLICY'>CURLOPT_CLOSEPOLICY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CLOSESOCKETDATA.html'
+                               title='curl_sys::CURLOPT_CLOSESOCKETDATA'>CURLOPT_CLOSESOCKETDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CLOSESOCKETFUNCTION.html'
+                               title='curl_sys::CURLOPT_CLOSESOCKETFUNCTION'>CURLOPT_CLOSESOCKETFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONNECTTIMEOUT.html'
+                               title='curl_sys::CURLOPT_CONNECTTIMEOUT'>CURLOPT_CONNECTTIMEOUT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONNECTTIMEOUT_MS.html'
+                               title='curl_sys::CURLOPT_CONNECTTIMEOUT_MS'>CURLOPT_CONNECTTIMEOUT_MS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONNECT_ONLY.html'
+                               title='curl_sys::CURLOPT_CONNECT_ONLY'>CURLOPT_CONNECT_ONLY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONV_FROM_NETWORK_FUNCTION.html'
+                               title='curl_sys::CURLOPT_CONV_FROM_NETWORK_FUNCTION'>CURLOPT_CONV_FROM_NETWORK_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONV_FROM_UTF8_FUNCTION.html'
+                               title='curl_sys::CURLOPT_CONV_FROM_UTF8_FUNCTION'>CURLOPT_CONV_FROM_UTF8_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CONV_TO_NETWORK_FUNCTION.html'
+                               title='curl_sys::CURLOPT_CONV_TO_NETWORK_FUNCTION'>CURLOPT_CONV_TO_NETWORK_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COOKIE.html'
+                               title='curl_sys::CURLOPT_COOKIE'>CURLOPT_COOKIE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COOKIEFILE.html'
+                               title='curl_sys::CURLOPT_COOKIEFILE'>CURLOPT_COOKIEFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COOKIEJAR.html'
+                               title='curl_sys::CURLOPT_COOKIEJAR'>CURLOPT_COOKIEJAR</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COOKIELIST.html'
+                               title='curl_sys::CURLOPT_COOKIELIST'>CURLOPT_COOKIELIST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COOKIESESSION.html'
+                               title='curl_sys::CURLOPT_COOKIESESSION'>CURLOPT_COOKIESESSION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_COPYPOSTFIELDS.html'
+                               title='curl_sys::CURLOPT_COPYPOSTFIELDS'>CURLOPT_COPYPOSTFIELDS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CRLF.html'
+                               title='curl_sys::CURLOPT_CRLF'>CURLOPT_CRLF</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CRLFILE.html'
+                               title='curl_sys::CURLOPT_CRLFILE'>CURLOPT_CRLFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_CUSTOMREQUEST.html'
+                               title='curl_sys::CURLOPT_CUSTOMREQUEST'>CURLOPT_CUSTOMREQUEST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DEBUGDATA.html'
+                               title='curl_sys::CURLOPT_DEBUGDATA'>CURLOPT_DEBUGDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DEBUGFUNCTION.html'
+                               title='curl_sys::CURLOPT_DEBUGFUNCTION'>CURLOPT_DEBUGFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DIRLISTONLY.html'
+                               title='curl_sys::CURLOPT_DIRLISTONLY'>CURLOPT_DIRLISTONLY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_CACHE_TIMEOUT.html'
+                               title='curl_sys::CURLOPT_DNS_CACHE_TIMEOUT'>CURLOPT_DNS_CACHE_TIMEOUT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_INTERFACE.html'
+                               title='curl_sys::CURLOPT_DNS_INTERFACE'>CURLOPT_DNS_INTERFACE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_LOCAL_IP4.html'
+                               title='curl_sys::CURLOPT_DNS_LOCAL_IP4'>CURLOPT_DNS_LOCAL_IP4</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_LOCAL_IP6.html'
+                               title='curl_sys::CURLOPT_DNS_LOCAL_IP6'>CURLOPT_DNS_LOCAL_IP6</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_SERVERS.html'
+                               title='curl_sys::CURLOPT_DNS_SERVERS'>CURLOPT_DNS_SERVERS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_DNS_USE_GLOBAL_CACHE.html'
+                               title='curl_sys::CURLOPT_DNS_USE_GLOBAL_CACHE'>CURLOPT_DNS_USE_GLOBAL_CACHE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_EGDSOCKET.html'
+                               title='curl_sys::CURLOPT_EGDSOCKET'>CURLOPT_EGDSOCKET</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_ERRORBUFFER.html'
+                               title='curl_sys::CURLOPT_ERRORBUFFER'>CURLOPT_ERRORBUFFER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_EXPECT_100_TIMEOUT_MS.html'
+                               title='curl_sys::CURLOPT_EXPECT_100_TIMEOUT_MS'>CURLOPT_EXPECT_100_TIMEOUT_MS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FAILONERROR.html'
+                               title='curl_sys::CURLOPT_FAILONERROR'>CURLOPT_FAILONERROR</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FILE.html'
+                               title='curl_sys::CURLOPT_FILE'>CURLOPT_FILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FILETIME.html'
+                               title='curl_sys::CURLOPT_FILETIME'>CURLOPT_FILETIME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FNMATCH_DATA.html'
+                               title='curl_sys::CURLOPT_FNMATCH_DATA'>CURLOPT_FNMATCH_DATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FNMATCH_FUNCTION.html'
+                               title='curl_sys::CURLOPT_FNMATCH_FUNCTION'>CURLOPT_FNMATCH_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FOLLOWLOCATION.html'
+                               title='curl_sys::CURLOPT_FOLLOWLOCATION'>CURLOPT_FOLLOWLOCATION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FORBID_REUSE.html'
+                               title='curl_sys::CURLOPT_FORBID_REUSE'>CURLOPT_FORBID_REUSE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FRESH_CONNECT.html'
+                               title='curl_sys::CURLOPT_FRESH_CONNECT'>CURLOPT_FRESH_CONNECT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTPAPPEND.html'
+                               title='curl_sys::CURLOPT_FTPAPPEND'>CURLOPT_FTPAPPEND</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTPLISTONLY.html'
+                               title='curl_sys::CURLOPT_FTPLISTONLY'>CURLOPT_FTPLISTONLY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTPPORT.html'
+                               title='curl_sys::CURLOPT_FTPPORT'>CURLOPT_FTPPORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTPSSLAUTH.html'
+                               title='curl_sys::CURLOPT_FTPSSLAUTH'>CURLOPT_FTPSSLAUTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_ACCOUNT.html'
+                               title='curl_sys::CURLOPT_FTP_ACCOUNT'>CURLOPT_FTP_ACCOUNT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_ALTERNATIVE_TO_USER.html'
+                               title='curl_sys::CURLOPT_FTP_ALTERNATIVE_TO_USER'>CURLOPT_FTP_ALTERNATIVE_TO_USER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_CREATE_MISSING_DIRS.html'
+                               title='curl_sys::CURLOPT_FTP_CREATE_MISSING_DIRS'>CURLOPT_FTP_CREATE_MISSING_DIRS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_FILEMETHOD.html'
+                               title='curl_sys::CURLOPT_FTP_FILEMETHOD'>CURLOPT_FTP_FILEMETHOD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_RESPONSE_TIMEOUT.html'
+                               title='curl_sys::CURLOPT_FTP_RESPONSE_TIMEOUT'>CURLOPT_FTP_RESPONSE_TIMEOUT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_SKIP_PASV_IP.html'
+                               title='curl_sys::CURLOPT_FTP_SKIP_PASV_IP'>CURLOPT_FTP_SKIP_PASV_IP</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_SSL.html'
+                               title='curl_sys::CURLOPT_FTP_SSL'>CURLOPT_FTP_SSL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_SSL_CCC.html'
+                               title='curl_sys::CURLOPT_FTP_SSL_CCC'>CURLOPT_FTP_SSL_CCC</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_USE_EPRT.html'
+                               title='curl_sys::CURLOPT_FTP_USE_EPRT'>CURLOPT_FTP_USE_EPRT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_USE_EPSV.html'
+                               title='curl_sys::CURLOPT_FTP_USE_EPSV'>CURLOPT_FTP_USE_EPSV</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_FTP_USE_PRET.html'
+                               title='curl_sys::CURLOPT_FTP_USE_PRET'>CURLOPT_FTP_USE_PRET</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_GSSAPI_DELEGATION.html'
+                               title='curl_sys::CURLOPT_GSSAPI_DELEGATION'>CURLOPT_GSSAPI_DELEGATION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HEADER.html'
+                               title='curl_sys::CURLOPT_HEADER'>CURLOPT_HEADER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HEADERDATA.html'
+                               title='curl_sys::CURLOPT_HEADERDATA'>CURLOPT_HEADERDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HEADERFUNCTION.html'
+                               title='curl_sys::CURLOPT_HEADERFUNCTION'>CURLOPT_HEADERFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HEADEROPT.html'
+                               title='curl_sys::CURLOPT_HEADEROPT'>CURLOPT_HEADEROPT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTP200ALIASES.html'
+                               title='curl_sys::CURLOPT_HTTP200ALIASES'>CURLOPT_HTTP200ALIASES</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTPAUTH.html'
+                               title='curl_sys::CURLOPT_HTTPAUTH'>CURLOPT_HTTPAUTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTPGET.html'
+                               title='curl_sys::CURLOPT_HTTPGET'>CURLOPT_HTTPGET</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTPHEADER.html'
+                               title='curl_sys::CURLOPT_HTTPHEADER'>CURLOPT_HTTPHEADER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTPPOST.html'
+                               title='curl_sys::CURLOPT_HTTPPOST'>CURLOPT_HTTPPOST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTPPROXYTUNNEL.html'
+                               title='curl_sys::CURLOPT_HTTPPROXYTUNNEL'>CURLOPT_HTTPPROXYTUNNEL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTP_CONTENT_DECODING.html'
+                               title='curl_sys::CURLOPT_HTTP_CONTENT_DECODING'>CURLOPT_HTTP_CONTENT_DECODING</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTP_TRANSFER_DECODING.html'
+                               title='curl_sys::CURLOPT_HTTP_TRANSFER_DECODING'>CURLOPT_HTTP_TRANSFER_DECODING</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_HTTP_VERSION.html'
+                               title='curl_sys::CURLOPT_HTTP_VERSION'>CURLOPT_HTTP_VERSION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_IGNORE_CONTENT_LENGTH.html'
+                               title='curl_sys::CURLOPT_IGNORE_CONTENT_LENGTH'>CURLOPT_IGNORE_CONTENT_LENGTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INFILE.html'
+                               title='curl_sys::CURLOPT_INFILE'>CURLOPT_INFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INFILESIZE.html'
+                               title='curl_sys::CURLOPT_INFILESIZE'>CURLOPT_INFILESIZE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INFILESIZE_LARGE.html'
+                               title='curl_sys::CURLOPT_INFILESIZE_LARGE'>CURLOPT_INFILESIZE_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INTERFACE.html'
+                               title='curl_sys::CURLOPT_INTERFACE'>CURLOPT_INTERFACE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INTERLEAVEDATA.html'
+                               title='curl_sys::CURLOPT_INTERLEAVEDATA'>CURLOPT_INTERLEAVEDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_INTERLEAVEFUNCTION.html'
+                               title='curl_sys::CURLOPT_INTERLEAVEFUNCTION'>CURLOPT_INTERLEAVEFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_IOCTLDATA.html'
+                               title='curl_sys::CURLOPT_IOCTLDATA'>CURLOPT_IOCTLDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_IOCTLFUNCTION.html'
+                               title='curl_sys::CURLOPT_IOCTLFUNCTION'>CURLOPT_IOCTLFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_IPRESOLVE.html'
+                               title='curl_sys::CURLOPT_IPRESOLVE'>CURLOPT_IPRESOLVE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_ISSUERCERT.html'
+                               title='curl_sys::CURLOPT_ISSUERCERT'>CURLOPT_ISSUERCERT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_KEYPASSWD.html'
+                               title='curl_sys::CURLOPT_KEYPASSWD'>CURLOPT_KEYPASSWD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_KRB4LEVEL.html'
+                               title='curl_sys::CURLOPT_KRB4LEVEL'>CURLOPT_KRB4LEVEL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_KRBLEVEL.html'
+                               title='curl_sys::CURLOPT_KRBLEVEL'>CURLOPT_KRBLEVEL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_LOCALPORT.html'
+                               title='curl_sys::CURLOPT_LOCALPORT'>CURLOPT_LOCALPORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_LOCALPORTRANGE.html'
+                               title='curl_sys::CURLOPT_LOCALPORTRANGE'>CURLOPT_LOCALPORTRANGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_LOGIN_OPTIONS.html'
+                               title='curl_sys::CURLOPT_LOGIN_OPTIONS'>CURLOPT_LOGIN_OPTIONS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_LOW_SPEED_LIMIT.html'
+                               title='curl_sys::CURLOPT_LOW_SPEED_LIMIT'>CURLOPT_LOW_SPEED_LIMIT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_LOW_SPEED_TIME.html'
+                               title='curl_sys::CURLOPT_LOW_SPEED_TIME'>CURLOPT_LOW_SPEED_TIME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAIL_AUTH.html'
+                               title='curl_sys::CURLOPT_MAIL_AUTH'>CURLOPT_MAIL_AUTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAIL_FROM.html'
+                               title='curl_sys::CURLOPT_MAIL_FROM'>CURLOPT_MAIL_FROM</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAIL_RCPT.html'
+                               title='curl_sys::CURLOPT_MAIL_RCPT'>CURLOPT_MAIL_RCPT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAXCONNECTS.html'
+                               title='curl_sys::CURLOPT_MAXCONNECTS'>CURLOPT_MAXCONNECTS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAXFILESIZE.html'
+                               title='curl_sys::CURLOPT_MAXFILESIZE'>CURLOPT_MAXFILESIZE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAXFILESIZE_LARGE.html'
+                               title='curl_sys::CURLOPT_MAXFILESIZE_LARGE'>CURLOPT_MAXFILESIZE_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAXREDIRS.html'
+                               title='curl_sys::CURLOPT_MAXREDIRS'>CURLOPT_MAXREDIRS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAX_RECV_SPEED_LARGE.html'
+                               title='curl_sys::CURLOPT_MAX_RECV_SPEED_LARGE'>CURLOPT_MAX_RECV_SPEED_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_MAX_SEND_SPEED_LARGE.html'
+                               title='curl_sys::CURLOPT_MAX_SEND_SPEED_LARGE'>CURLOPT_MAX_SEND_SPEED_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NETRC.html'
+                               title='curl_sys::CURLOPT_NETRC'>CURLOPT_NETRC</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NETRC_FILE.html'
+                               title='curl_sys::CURLOPT_NETRC_FILE'>CURLOPT_NETRC_FILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NEW_DIRECTORY_PERMS.html'
+                               title='curl_sys::CURLOPT_NEW_DIRECTORY_PERMS'>CURLOPT_NEW_DIRECTORY_PERMS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NEW_FILE_PERMS.html'
+                               title='curl_sys::CURLOPT_NEW_FILE_PERMS'>CURLOPT_NEW_FILE_PERMS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NOBODY.html'
+                               title='curl_sys::CURLOPT_NOBODY'>CURLOPT_NOBODY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NOPROGRESS.html'
+                               title='curl_sys::CURLOPT_NOPROGRESS'>CURLOPT_NOPROGRESS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NOPROXY.html'
+                               title='curl_sys::CURLOPT_NOPROXY'>CURLOPT_NOPROXY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_NOSIGNAL.html'
+                               title='curl_sys::CURLOPT_NOSIGNAL'>CURLOPT_NOSIGNAL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_OPENSOCKETDATA.html'
+                               title='curl_sys::CURLOPT_OPENSOCKETDATA'>CURLOPT_OPENSOCKETDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_OPENSOCKETFUNCTION.html'
+                               title='curl_sys::CURLOPT_OPENSOCKETFUNCTION'>CURLOPT_OPENSOCKETFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PASSWORD.html'
+                               title='curl_sys::CURLOPT_PASSWORD'>CURLOPT_PASSWORD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PORT.html'
+                               title='curl_sys::CURLOPT_PORT'>CURLOPT_PORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POST.html'
+                               title='curl_sys::CURLOPT_POST'>CURLOPT_POST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POST301.html'
+                               title='curl_sys::CURLOPT_POST301'>CURLOPT_POST301</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POSTFIELDS.html'
+                               title='curl_sys::CURLOPT_POSTFIELDS'>CURLOPT_POSTFIELDS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POSTFIELDSIZE.html'
+                               title='curl_sys::CURLOPT_POSTFIELDSIZE'>CURLOPT_POSTFIELDSIZE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POSTFIELDSIZE_LARGE.html'
+                               title='curl_sys::CURLOPT_POSTFIELDSIZE_LARGE'>CURLOPT_POSTFIELDSIZE_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POSTQUOTE.html'
+                               title='curl_sys::CURLOPT_POSTQUOTE'>CURLOPT_POSTQUOTE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_POSTREDIR.html'
+                               title='curl_sys::CURLOPT_POSTREDIR'>CURLOPT_POSTREDIR</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PREQUOTE.html'
+                               title='curl_sys::CURLOPT_PREQUOTE'>CURLOPT_PREQUOTE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PRIVATE.html'
+                               title='curl_sys::CURLOPT_PRIVATE'>CURLOPT_PRIVATE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROGRESSDATA.html'
+                               title='curl_sys::CURLOPT_PROGRESSDATA'>CURLOPT_PROGRESSDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROGRESSFUNCTION.html'
+                               title='curl_sys::CURLOPT_PROGRESSFUNCTION'>CURLOPT_PROGRESSFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROTOCOLS.html'
+                               title='curl_sys::CURLOPT_PROTOCOLS'>CURLOPT_PROTOCOLS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXY.html'
+                               title='curl_sys::CURLOPT_PROXY'>CURLOPT_PROXY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYAUTH.html'
+                               title='curl_sys::CURLOPT_PROXYAUTH'>CURLOPT_PROXYAUTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYHEADER.html'
+                               title='curl_sys::CURLOPT_PROXYHEADER'>CURLOPT_PROXYHEADER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYPASSWORD.html'
+                               title='curl_sys::CURLOPT_PROXYPASSWORD'>CURLOPT_PROXYPASSWORD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYPORT.html'
+                               title='curl_sys::CURLOPT_PROXYPORT'>CURLOPT_PROXYPORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYTYPE.html'
+                               title='curl_sys::CURLOPT_PROXYTYPE'>CURLOPT_PROXYTYPE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYUSERNAME.html'
+                               title='curl_sys::CURLOPT_PROXYUSERNAME'>CURLOPT_PROXYUSERNAME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXYUSERPWD.html'
+                               title='curl_sys::CURLOPT_PROXYUSERPWD'>CURLOPT_PROXYUSERPWD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PROXY_TRANSFER_MODE.html'
+                               title='curl_sys::CURLOPT_PROXY_TRANSFER_MODE'>CURLOPT_PROXY_TRANSFER_MODE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_PUT.html'
+                               title='curl_sys::CURLOPT_PUT'>CURLOPT_PUT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_QUOTE.html'
+                               title='curl_sys::CURLOPT_QUOTE'>CURLOPT_QUOTE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RANDOM_FILE.html'
+                               title='curl_sys::CURLOPT_RANDOM_FILE'>CURLOPT_RANDOM_FILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RANGE.html'
+                               title='curl_sys::CURLOPT_RANGE'>CURLOPT_RANGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_READDATA.html'
+                               title='curl_sys::CURLOPT_READDATA'>CURLOPT_READDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_READFUNCTION.html'
+                               title='curl_sys::CURLOPT_READFUNCTION'>CURLOPT_READFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_REDIR_PROTOCOLS.html'
+                               title='curl_sys::CURLOPT_REDIR_PROTOCOLS'>CURLOPT_REDIR_PROTOCOLS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_REFERER.html'
+                               title='curl_sys::CURLOPT_REFERER'>CURLOPT_REFERER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RESOLVE.html'
+                               title='curl_sys::CURLOPT_RESOLVE'>CURLOPT_RESOLVE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RESUME_FROM.html'
+                               title='curl_sys::CURLOPT_RESUME_FROM'>CURLOPT_RESUME_FROM</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RESUME_FROM_LARGE.html'
+                               title='curl_sys::CURLOPT_RESUME_FROM_LARGE'>CURLOPT_RESUME_FROM_LARGE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_CLIENT_CSEQ.html'
+                               title='curl_sys::CURLOPT_RTSP_CLIENT_CSEQ'>CURLOPT_RTSP_CLIENT_CSEQ</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_REQUEST.html'
+                               title='curl_sys::CURLOPT_RTSP_REQUEST'>CURLOPT_RTSP_REQUEST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_SERVER_CSEQ.html'
+                               title='curl_sys::CURLOPT_RTSP_SERVER_CSEQ'>CURLOPT_RTSP_SERVER_CSEQ</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_SESSION_ID.html'
+                               title='curl_sys::CURLOPT_RTSP_SESSION_ID'>CURLOPT_RTSP_SESSION_ID</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_STREAM_URI.html'
+                               title='curl_sys::CURLOPT_RTSP_STREAM_URI'>CURLOPT_RTSP_STREAM_URI</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_RTSP_TRANSPORT.html'
+                               title='curl_sys::CURLOPT_RTSP_TRANSPORT'>CURLOPT_RTSP_TRANSPORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SASL_IR.html'
+                               title='curl_sys::CURLOPT_SASL_IR'>CURLOPT_SASL_IR</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SEEKDATA.html'
+                               title='curl_sys::CURLOPT_SEEKDATA'>CURLOPT_SEEKDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SEEKFUNCTION.html'
+                               title='curl_sys::CURLOPT_SEEKFUNCTION'>CURLOPT_SEEKFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SHARE.html'
+                               title='curl_sys::CURLOPT_SHARE'>CURLOPT_SHARE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SOCKOPTDATA.html'
+                               title='curl_sys::CURLOPT_SOCKOPTDATA'>CURLOPT_SOCKOPTDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SOCKOPTFUNCTION.html'
+                               title='curl_sys::CURLOPT_SOCKOPTFUNCTION'>CURLOPT_SOCKOPTFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SOCKS5_GSSAPI_NEC.html'
+                               title='curl_sys::CURLOPT_SOCKS5_GSSAPI_NEC'>CURLOPT_SOCKS5_GSSAPI_NEC</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SOCKS5_GSSAPI_SERVICE.html'
+                               title='curl_sys::CURLOPT_SOCKS5_GSSAPI_SERVICE'>CURLOPT_SOCKS5_GSSAPI_SERVICE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_AUTH_TYPES.html'
+                               title='curl_sys::CURLOPT_SSH_AUTH_TYPES'>CURLOPT_SSH_AUTH_TYPES</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_HOST_PUBLIC_KEY_MD5.html'
+                               title='curl_sys::CURLOPT_SSH_HOST_PUBLIC_KEY_MD5'>CURLOPT_SSH_HOST_PUBLIC_KEY_MD5</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_KEYDATA.html'
+                               title='curl_sys::CURLOPT_SSH_KEYDATA'>CURLOPT_SSH_KEYDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_KEYFUNCTION.html'
+                               title='curl_sys::CURLOPT_SSH_KEYFUNCTION'>CURLOPT_SSH_KEYFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_KNOWNHOSTS.html'
+                               title='curl_sys::CURLOPT_SSH_KNOWNHOSTS'>CURLOPT_SSH_KNOWNHOSTS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_PRIVATE_KEYFILE.html'
+                               title='curl_sys::CURLOPT_SSH_PRIVATE_KEYFILE'>CURLOPT_SSH_PRIVATE_KEYFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSH_PUBLIC_KEYFILE.html'
+                               title='curl_sys::CURLOPT_SSH_PUBLIC_KEYFILE'>CURLOPT_SSH_PUBLIC_KEYFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLCERT.html'
+                               title='curl_sys::CURLOPT_SSLCERT'>CURLOPT_SSLCERT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLCERTPASSWD.html'
+                               title='curl_sys::CURLOPT_SSLCERTPASSWD'>CURLOPT_SSLCERTPASSWD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLCERTTYPE.html'
+                               title='curl_sys::CURLOPT_SSLCERTTYPE'>CURLOPT_SSLCERTTYPE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLENGINE.html'
+                               title='curl_sys::CURLOPT_SSLENGINE'>CURLOPT_SSLENGINE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLENGINE_DEFAULT.html'
+                               title='curl_sys::CURLOPT_SSLENGINE_DEFAULT'>CURLOPT_SSLENGINE_DEFAULT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLKEY.html'
+                               title='curl_sys::CURLOPT_SSLKEY'>CURLOPT_SSLKEY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLKEYPASSWD.html'
+                               title='curl_sys::CURLOPT_SSLKEYPASSWD'>CURLOPT_SSLKEYPASSWD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLKEYTYPE.html'
+                               title='curl_sys::CURLOPT_SSLKEYTYPE'>CURLOPT_SSLKEYTYPE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSLVERSION.html'
+                               title='curl_sys::CURLOPT_SSLVERSION'>CURLOPT_SSLVERSION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_CIPHER_LIST.html'
+                               title='curl_sys::CURLOPT_SSL_CIPHER_LIST'>CURLOPT_SSL_CIPHER_LIST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_CTX_DATA.html'
+                               title='curl_sys::CURLOPT_SSL_CTX_DATA'>CURLOPT_SSL_CTX_DATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_CTX_FUNCTION.html'
+                               title='curl_sys::CURLOPT_SSL_CTX_FUNCTION'>CURLOPT_SSL_CTX_FUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_ENABLE_ALPN.html'
+                               title='curl_sys::CURLOPT_SSL_ENABLE_ALPN'>CURLOPT_SSL_ENABLE_ALPN</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_ENABLE_NPN.html'
+                               title='curl_sys::CURLOPT_SSL_ENABLE_NPN'>CURLOPT_SSL_ENABLE_NPN</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_OPTIONS.html'
+                               title='curl_sys::CURLOPT_SSL_OPTIONS'>CURLOPT_SSL_OPTIONS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_SESSIONID_CACHE.html'
+                               title='curl_sys::CURLOPT_SSL_SESSIONID_CACHE'>CURLOPT_SSL_SESSIONID_CACHE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_VERIFYHOST.html'
+                               title='curl_sys::CURLOPT_SSL_VERIFYHOST'>CURLOPT_SSL_VERIFYHOST</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_SSL_VERIFYPEER.html'
+                               title='curl_sys::CURLOPT_SSL_VERIFYPEER'>CURLOPT_SSL_VERIFYPEER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_STDERR.html'
+                               title='curl_sys::CURLOPT_STDERR'>CURLOPT_STDERR</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TCP_KEEPALIVE.html'
+                               title='curl_sys::CURLOPT_TCP_KEEPALIVE'>CURLOPT_TCP_KEEPALIVE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TCP_KEEPIDLE.html'
+                               title='curl_sys::CURLOPT_TCP_KEEPIDLE'>CURLOPT_TCP_KEEPIDLE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TCP_KEEPINTVL.html'
+                               title='curl_sys::CURLOPT_TCP_KEEPINTVL'>CURLOPT_TCP_KEEPINTVL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TCP_NODELAY.html'
+                               title='curl_sys::CURLOPT_TCP_NODELAY'>CURLOPT_TCP_NODELAY</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TELNETOPTIONS.html'
+                               title='curl_sys::CURLOPT_TELNETOPTIONS'>CURLOPT_TELNETOPTIONS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TFTP_BLKSIZE.html'
+                               title='curl_sys::CURLOPT_TFTP_BLKSIZE'>CURLOPT_TFTP_BLKSIZE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TIMECONDITION.html'
+                               title='curl_sys::CURLOPT_TIMECONDITION'>CURLOPT_TIMECONDITION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TIMEOUT.html'
+                               title='curl_sys::CURLOPT_TIMEOUT'>CURLOPT_TIMEOUT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TIMEOUT_MS.html'
+                               title='curl_sys::CURLOPT_TIMEOUT_MS'>CURLOPT_TIMEOUT_MS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TIMEVALUE.html'
+                               title='curl_sys::CURLOPT_TIMEVALUE'>CURLOPT_TIMEVALUE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TLSAUTH_PASSWORD.html'
+                               title='curl_sys::CURLOPT_TLSAUTH_PASSWORD'>CURLOPT_TLSAUTH_PASSWORD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TLSAUTH_TYPE.html'
+                               title='curl_sys::CURLOPT_TLSAUTH_TYPE'>CURLOPT_TLSAUTH_TYPE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TLSAUTH_USERNAME.html'
+                               title='curl_sys::CURLOPT_TLSAUTH_USERNAME'>CURLOPT_TLSAUTH_USERNAME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TRANSFERTEXT.html'
+                               title='curl_sys::CURLOPT_TRANSFERTEXT'>CURLOPT_TRANSFERTEXT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_TRANSFER_ENCODING.html'
+                               title='curl_sys::CURLOPT_TRANSFER_ENCODING'>CURLOPT_TRANSFER_ENCODING</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_UNRESTRICTED_AUTH.html'
+                               title='curl_sys::CURLOPT_UNRESTRICTED_AUTH'>CURLOPT_UNRESTRICTED_AUTH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_UPLOAD.html'
+                               title='curl_sys::CURLOPT_UPLOAD'>CURLOPT_UPLOAD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_URL.html'
+                               title='curl_sys::CURLOPT_URL'>CURLOPT_URL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_USERAGENT.html'
+                               title='curl_sys::CURLOPT_USERAGENT'>CURLOPT_USERAGENT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_USERNAME.html'
+                               title='curl_sys::CURLOPT_USERNAME'>CURLOPT_USERNAME</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_USERPWD.html'
+                               title='curl_sys::CURLOPT_USERPWD'>CURLOPT_USERPWD</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_USE_SSL.html'
+                               title='curl_sys::CURLOPT_USE_SSL'>CURLOPT_USE_SSL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_VERBOSE.html'
+                               title='curl_sys::CURLOPT_VERBOSE'>CURLOPT_VERBOSE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_WILDCARDMATCH.html'
+                               title='curl_sys::CURLOPT_WILDCARDMATCH'>CURLOPT_WILDCARDMATCH</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_WRITEDATA.html'
+                               title='curl_sys::CURLOPT_WRITEDATA'>CURLOPT_WRITEDATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_WRITEFUNCTION.html'
+                               title='curl_sys::CURLOPT_WRITEFUNCTION'>CURLOPT_WRITEFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_WRITEHEADER.html'
+                               title='curl_sys::CURLOPT_WRITEHEADER'>CURLOPT_WRITEHEADER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_WRITEINFO.html'
+                               title='curl_sys::CURLOPT_WRITEINFO'>CURLOPT_WRITEINFO</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_XFERINFODATA.html'
+                               title='curl_sys::CURLOPT_XFERINFODATA'>CURLOPT_XFERINFODATA</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_XFERINFOFUNCTION.html'
+                               title='curl_sys::CURLOPT_XFERINFOFUNCTION'>CURLOPT_XFERINFOFUNCTION</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURLOPT_XOAUTH2_BEARER.html'
+                               title='curl_sys::CURLOPT_XOAUTH2_BEARER'>CURLOPT_XOAUTH2_BEARER</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_READFUNC_ABORT.html'
+                               title='curl_sys::CURL_READFUNC_ABORT'>CURL_READFUNC_ABORT</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_ASYNCHDNS.html'
+                               title='curl_sys::CURL_VERSION_ASYNCHDNS'>CURL_VERSION_ASYNCHDNS</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_CONV.html'
+                               title='curl_sys::CURL_VERSION_CONV'>CURL_VERSION_CONV</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_CURLDEBUG.html'
+                               title='curl_sys::CURL_VERSION_CURLDEBUG'>CURL_VERSION_CURLDEBUG</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_DEBUG.html'
+                               title='curl_sys::CURL_VERSION_DEBUG'>CURL_VERSION_DEBUG</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_GSSNEGOTIATE.html'
+                               title='curl_sys::CURL_VERSION_GSSNEGOTIATE'>CURL_VERSION_GSSNEGOTIATE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_HTTP2.html'
+                               title='curl_sys::CURL_VERSION_HTTP2'>CURL_VERSION_HTTP2</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_IDN.html'
+                               title='curl_sys::CURL_VERSION_IDN'>CURL_VERSION_IDN</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_IPV6.html'
+                               title='curl_sys::CURL_VERSION_IPV6'>CURL_VERSION_IPV6</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_KERBEROS4.html'
+                               title='curl_sys::CURL_VERSION_KERBEROS4'>CURL_VERSION_KERBEROS4</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_LARGEFILE.html'
+                               title='curl_sys::CURL_VERSION_LARGEFILE'>CURL_VERSION_LARGEFILE</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_LIBZ.html'
+                               title='curl_sys::CURL_VERSION_LIBZ'>CURL_VERSION_LIBZ</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_NOW.html'
+                               title='curl_sys::CURL_VERSION_NOW'>CURL_VERSION_NOW</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_NTLM.html'
+                               title='curl_sys::CURL_VERSION_NTLM'>CURL_VERSION_NTLM</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_NTLM_WB.html'
+                               title='curl_sys::CURL_VERSION_NTLM_WB'>CURL_VERSION_NTLM_WB</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_SPNEGO.html'
+                               title='curl_sys::CURL_VERSION_SPNEGO'>CURL_VERSION_SPNEGO</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_SSL.html'
+                               title='curl_sys::CURL_VERSION_SSL'>CURL_VERSION_SSL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_SSPI.html'
+                               title='curl_sys::CURL_VERSION_SSPI'>CURL_VERSION_SSPI</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='constant' href='constant.CURL_VERSION_TLSAUTH_SRP.html'
+                               title='curl_sys::CURL_VERSION_TLSAUTH_SRP'>CURL_VERSION_TLSAUTH_SRP</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_cleanup.html'
+                               title='curl_sys::curl_easy_cleanup'>curl_easy_cleanup</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_getinfo.html'
+                               title='curl_sys::curl_easy_getinfo'>curl_easy_getinfo</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_init.html'
+                               title='curl_sys::curl_easy_init'>curl_easy_init</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_perform.html'
+                               title='curl_sys::curl_easy_perform'>curl_easy_perform</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_setopt.html'
+                               title='curl_sys::curl_easy_setopt'>curl_easy_setopt</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_easy_strerror.html'
+                               title='curl_sys::curl_easy_strerror'>curl_easy_strerror</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_global_cleanup.html'
+                               title='curl_sys::curl_global_cleanup'>curl_global_cleanup</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_slist_append.html'
+                               title='curl_sys::curl_slist_append'>curl_slist_append</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_slist_free_all.html'
+                               title='curl_sys::curl_slist_free_all'>curl_slist_free_all</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_version.html'
+                               title='curl_sys::curl_version'>curl_version</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.curl_version_info.html'
+                               title='curl_sys::curl_version_info'>curl_version_info</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='type' href='type.CURL.html'
+                               title='curl_sys::CURL'>CURL</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='type' href='type.CURLINFO.html'
+                               title='curl_sys::CURLINFO'>CURLINFO</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='type' href='type.CURLoption.html'
+                               title='curl_sys::CURLoption'>CURLoption</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='type' href='type.curl_slist.html'
+                               title='curl_sys::curl_slist'>curl_slist</a></td>
+                        <td class='docblock short'>
+                             
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+            <p>
+                Search functions by type signature (e.g.
+                <code>vec -> usize</code>)
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "curl_sys";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
